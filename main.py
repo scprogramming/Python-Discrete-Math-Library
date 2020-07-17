@@ -11,4 +11,6 @@ s2.insert(1)
 s2.insert(2)
 s2.insert(3)
 
+print(subsetCheck(s1,s2))
 print(subsetCheck(s2,s1))
+print(generatePowerSet(s2))

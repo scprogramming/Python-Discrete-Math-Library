@@ -11,7 +11,16 @@ class Set:
         del self.values[value]
 
     def __str__(self):
-        print(str(self.values))
+        contents = "{"
+        i =0
+        for keys in self.values.keys():
+            if i == 0:
+                contents += str(keys)
+            else:
+                contents += "," + str(keys)
+            i += 1
+        contents += "}"
+        return contents
 
     def __iter__(self):
         return iter(self.values.copy())
@@ -27,3 +36,6 @@ class Set:
 
     def __contains__(self, item):
         return item in self.values.keys()
+
+    def getItems(self):
+        return list(self.values.keys())
