@@ -34,3 +34,11 @@ def generatePowerSet(set):
         powers.insert(tuple(tempSet))
 
     return powers
+
+def generateCartesianProduct(set1,set2):
+    productList = Set()
+    for a in set1.getItems():
+        for b in set2.getItems():
+            item = [a,b]
+            productList.insert(tuple(item))
+    return productList
