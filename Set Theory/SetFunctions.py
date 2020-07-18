@@ -42,3 +42,31 @@ def generateCartesianProduct(set1,set2):
             item = [a,b]
             productList.insert(tuple(item))
     return productList
+
+def union(set1,set2):
+    unionSet = Set()
+
+    for x in set1:
+        unionSet.insert(x)
+    for x in set2:
+        unionSet.insert(x)
+
+    return unionSet
+
+def intersect(set1,set2):
+    intersectSet = Set()
+
+    for x in set1:
+        if x in set2:
+            intersectSet.insert(x)
+
+    return intersectSet
+
+def setDifference(set1,set2):
+    differenceSet = Set()
+
+    for x in set1:
+        if x not in set2:
+            differenceSet.insert(x)
+
+    return differenceSet
